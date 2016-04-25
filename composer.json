@@ -1,5 +1,5 @@
 {
-	"name": "nabarabane/amocrm",
+	"name": "d-ivaschenko-parc/amocrm",
 	"type": "library",
 	"description": "Простая обертка для работы с API AmoCRM",
 	"license": "MIT",
