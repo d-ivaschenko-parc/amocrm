@@ -36,7 +36,7 @@ class Handler
         }
 
         if ($this->debug) {
-            $this->errors = json_decode(trim(file_get_contents($this->storageDir . '/errors.json')));
+            $this->errors = json_decode(trim(file_get_contents(__DIR__ . '/../config/errors.json')));
         }
 
         $this->request(new Request(Request::AUTH, $this));
