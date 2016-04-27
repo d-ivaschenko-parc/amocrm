@@ -28,7 +28,6 @@ class Handler
         $this->storageDir = realpath((
             !empty($params['storageDir'])
             ? $params['storageDir']
-            : __DIR__ . '/../config'
         ));
 
         if (!is_readable($this->storageDir) || !is_writable($this->storageDir)) {
