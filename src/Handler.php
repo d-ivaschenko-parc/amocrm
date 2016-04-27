@@ -26,8 +26,7 @@ class Handler
         $this->config = $params['config'];
         $this->key = $params['key'];
         $this->storageDir = realpath((
-            !empty($params['storageDir'])
-            ? $params['storageDir']
+            $params['storageDir']
         ));
 
         if (!is_readable($this->storageDir) || !is_writable($this->storageDir)) {
