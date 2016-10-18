@@ -29,6 +29,10 @@ class Handler
             $params['storageDir']
         ));
 
+        if (!is_dir($this->storageDir) && !mkdir($this->storageDir, 0700, true)) {
+            throw new InvalidArgumentException('Директория "config" не может быть создана по пути ' . $this->storageDir);
+        }
+
         if (!is_readable($this->storageDir) || !is_writable($this->storageDir)) {
             throw new InvalidArgumentException('Директория "config" должна быть доступна для чтения и записи');
         }

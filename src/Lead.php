@@ -10,6 +10,7 @@ class Lead extends Entity
     public $status_id;
     public $price;
     public $custom_fields;
+    public $pipeline_id;
 
     private $tags_array;
 
@@ -19,6 +20,18 @@ class Lead extends Entity
         $this->url_name = $this->key_name;
         $this->custom_fields = [];
         $this->tags_array = [];
+    }
+
+    /**
+     * задать воронку
+     * @param $pipelineId
+     * @return $this
+     */
+    public function setPipelineId($pipelineId)
+    {
+        $this->pipeline_id = $pipelineId;
+
+        return $this;
     }
 
     public function setName($value)
